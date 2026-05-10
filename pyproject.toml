@@ -1,0 +1,27 @@
+[project]
+name = "neiWangAgent"
+version = "0.1.0"
+description = "本地无服务器 MCP Agent — 自动改代码 → commit → push → 创建 MR"
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml>=6.0",
+    "httpx>=0.24",
+]
+
+[project.optional-dependencies]
+db = ["psycopg2-binary>=2.9", "mysql-connector-python>=8.0"]
+
+[project.scripts]
+neiWangAgent = "cli:main"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = [
+    "cli",
+    "orchestrator",
+    "mcp_client",
+    "llm_client",
+]
