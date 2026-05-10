@@ -1,0 +1,26 @@
+{
+  "layers": {
+    "summary": {
+      "layer": "summary",
+      "files_indexed": 13,
+      "language_stats": {
+        ".py": 12,
+        ".yaml": 1
+      },
+      "message": "Summary 层索引完成: 13 个文件"
+    },
+    "hotspot": {
+      "layer": "hotspot",
+      "files_indexed": 0,
+      "language_stats": {},
+      "message": "Hotspot 层: 核心模块分析（v0.1 简化）"
+    },
+    "deep": {
+      "layer": "deep",
+      "files_indexed": 0,
+      "language_stats": {},
+      "message": "Deep 层: 深度索引（v0.1 简化）"
+    }
+  },
+  "files_total": 13
+}
