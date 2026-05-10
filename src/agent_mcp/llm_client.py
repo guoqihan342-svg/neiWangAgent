@@ -80,13 +80,17 @@ class LLMClient:
             )
 
         # --- Httpx client ---
-        self._client = httpx.Client(
-            timeout=httpx.Timeout(self.timeout),
-            headers={
+        proxy = os.environ.get("https_proxy") or os.environ.get("HTTPS_PROXY") or os.environ.get("http_proxy")
+        client_kwargs = {
+            "timeout": httpx.Timeout(self.timeout),
+            "headers": {
                 "Authorization": f"Bearer {self.api_key}",
                 "Content-Type": "application/json",
             },
-        )
+        }
+        if proxy:
+            client_kwargs["proxy"] = proxy
+        self._client = httpx.Client(**client_kwargs)
 
     # ------------------------------------------------------------------
     # Core chat method

@@ -385,3 +385,38 @@ class Orchestrator:
 
     def close(self):
         self.llm.close()
+
+    def warmup(self) -> dict:
+        """知识库预热 — 三层预理解模型"""
+        from agent_mcp.knowledge_server import KnowledgeMCPServer
+        ks = KnowledgeMCPServer()
+
+        repo = str(Path.cwd())
+        result = {"layers": {}, "files_total": 0}
+
+        # Summary 层
+        print("  [summary] 扫描代码库...")
+        r = ks._index_codebase(repo, "summary")
+        result["layers"]["summary"] = r
+        result["files_total"] += r.get("files_indexed", 0)
+        print(f"  [summary] {r.get('files_indexed', 0)} 个文件")
+
+        # Hotspot 层
+        print("  [hotspot] 分析核心模块...")
+        r = ks._index_codebase(repo, "hotspot")
+        result["layers"]["hotspot"] = r
+        print(f"  [hotspot] {r.get('message', '完成')}")
+
+        # Deep 层
+        print("  [deep] 深度索引...")
+        r = ks._index_codebase(repo, "deep")
+        result["layers"]["deep"] = r
+        print(f"  [deep] {r.get('message', '完成')}")
+
+        # 保存知识库状态
+        Path(".agent/knowledge").mkdir(parents=True, exist_ok=True)
+        kb_path = Path(".agent/knowledge/state.json")
+        kb_path.write_text(json.dumps(result, indent=2, ensure_ascii=False))
+
+        print(f"\n✅ 预热完成，共索引 {result['files_total']} 个文件")
+        return result
