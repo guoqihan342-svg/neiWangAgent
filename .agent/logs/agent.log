@@ -1,0 +1,24 @@
+{"ts": "2026-05-12T03:59:07.272301+00:00", "level": "DEBUG", "event": "llm.proxy_configured", "detail": {"proxy": "http://127.0.0.1:7890"}}
+{"ts": "2026-05-12T03:59:07.335086+00:00", "level": "DEBUG", "event": "llm.client_init", "detail": {"model": "${LLM_MODEL}", "base_url": "${LLM_BASE_URL}", "timeout": 120}}
+{"ts": "2026-05-12T03:59:07.335657+00:00", "level": "DEBUG", "event": "llm.client_closed"}
+{"ts": "2026-05-12T03:59:07.335937+00:00", "level": "DEBUG", "event": "agent.shutdown"}
+{"ts": "2026-05-12T03:59:07.337750+00:00", "level": "DEBUG", "event": "llm.proxy_configured", "detail": {"proxy": "http://127.0.0.1:7890"}}
+{"ts": "2026-05-12T03:59:07.347067+00:00", "level": "DEBUG", "event": "llm.client_init", "detail": {"model": "${LLM_MODEL}", "base_url": "${LLM_BASE_URL}", "timeout": 120}}
+{"ts": "2026-05-12T03:59:07.348033+00:00", "level": "DEBUG", "event": "llm.client_closed"}
+{"ts": "2026-05-12T03:59:07.348356+00:00", "level": "DEBUG", "event": "agent.shutdown"}
+{"ts": "2026-05-12T03:59:07.354281+00:00", "level": "DEBUG", "event": "llm.proxy_configured", "detail": {"proxy": "http://127.0.0.1:7890"}}
+{"ts": "2026-05-12T03:59:07.363382+00:00", "level": "DEBUG", "event": "llm.client_init", "detail": {"model": "${LLM_MODEL}", "base_url": "${LLM_BASE_URL}", "timeout": 120}}
+{"ts": "2026-05-12T03:59:07.364577+00:00", "level": "INFO", "event": "agent.run.start", "run_id": "20260512-115907", "step": "000", "detail": "add test feature"}
+{"ts": "2026-05-12T03:59:07.367368+00:00", "level": "ERROR", "event": "agent.run.error", "run_id": "20260512-115907", "step": "000", "detail": "name '_time' is not defined"}
+{"ts": "2026-05-12T03:59:07.373910+00:00", "level": "DEBUG", "event": "llm.client_closed", "run_id": "20260512-115907"}
+{"ts": "2026-05-12T03:59:07.374285+00:00", "level": "DEBUG", "event": "agent.shutdown", "run_id": "20260512-115907"}
+{"ts": "2026-05-12T03:59:07.376042+00:00", "level": "DEBUG", "event": "llm.proxy_configured", "run_id": "20260512-115907", "detail": {"proxy": "http://127.0.0.1:7890"}}
+{"ts": "2026-05-12T03:59:07.385487+00:00", "level": "DEBUG", "event": "llm.client_init", "run_id": "20260512-115907", "detail": {"model": "${LLM_MODEL}", "base_url": "${LLM_BASE_URL}", "timeout": 120}}
+{"ts": "2026-05-12T03:59:07.386992+00:00", "level": "DEBUG", "event": "llm.client_closed", "run_id": "20260512-115907"}
+{"ts": "2026-05-12T03:59:07.387364+00:00", "level": "DEBUG", "event": "agent.shutdown", "run_id": "20260512-115907"}
+{"ts": "2026-05-12T03:59:07.391714+00:00", "level": "DEBUG", "event": "llm.proxy_configured", "run_id": "20260512-115907", "detail": {"proxy": "http://127.0.0.1:7890"}}
+{"ts": "2026-05-12T03:59:07.400090+00:00", "level": "DEBUG", "event": "llm.client_init", "run_id": "20260512-115907", "detail": {"model": "${LLM_MODEL}", "base_url": "${LLM_BASE_URL}", "timeout": 120}}
+{"ts": "2026-05-12T03:59:07.400534+00:00", "level": "DEBUG", "event": "llm.client_closed", "run_id": "20260512-115907"}
+{"ts": "2026-05-12T03:59:07.400888+00:00", "level": "DEBUG", "event": "agent.shutdown", "run_id": "20260512-115907"}
+{"ts": "2026-05-12T03:59:07.402695+00:00", "level": "DEBUG", "event": "llm.proxy_configured", "run_id": "20260512-115907", "detail": {"proxy": "http://127.0.0.1:7890"}}
+{"ts": "2026-05-12T03:59:07.412062+00:00", "level": "DEBUG", "event": "llm.client_init", "run_id": "20260512-115907", "detail": {"model": "${LLM_MODEL}", "base_url": "${LLM_BASE_URL}", "timeout": 120}}
