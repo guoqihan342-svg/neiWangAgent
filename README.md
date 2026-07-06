@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/guoqihan342-svg-neiwangagent-badge.png)](https://mseep.ai/app/guoqihan342-svg-neiwangagent)
+
 # neiWangAgent v0.1.2
 
 > 本地无服务器 MCP Agent — 自动改代码 → commit → push → 创建 MR
